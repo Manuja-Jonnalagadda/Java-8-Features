@@ -1,0 +1,15 @@
+public class Car {
+
+	public static void main(String[] args) {
+		Automobile.message();
+		//	Automobile.info();
+		//  Cannot refer  to non-static without object reference of that class
+		Automobile car = () -> {
+			System.out.println("This is a car");
+			};
+		car.type();
+		car.info();
+		((Automobile)()->{System.out.println("This is a car");}).type();
+		
+	}
+}
